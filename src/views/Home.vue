@@ -8,7 +8,7 @@
     <v-row justify="center">
       <v-icon class="chevron" size="100">mdi-chevron-down</v-icon>
     </v-row>
-    <Poster />
+    <Intro />
   </div>
 </template>
 
@@ -16,11 +16,13 @@
 // @ is an alias to /src
 import Poster from "@/components/Home/Poster.vue";
 import Products from "@/components/Home/Products.vue";
+import Intro from "@/components/Home/Intro.vue";
 
 export default {
   components: {
     Poster,
-    Products
+    Products,
+    Intro
   }
 };
 </script>

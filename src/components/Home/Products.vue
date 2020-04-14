@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <h1 class="stayupdated">Stay Updated</h1>
     <v-row class="text-center" justify="center" align="start">
       <v-col cols="4" v-for="(item, index) in products" :key="index">
         <v-img :src="item.img" width="100%" class="mainImg"></v-img>
@@ -11,9 +12,9 @@
             <i>#Game</i>
           </span>
         </div>
-        <span class="title"
-          ><b>{{ item.title }}</b></span
-        >
+        <span class="title">
+          <b>{{ item.title }}</b>
+        </span>
       </v-col>
     </v-row>
   </v-container>
@@ -35,7 +36,7 @@ export default {
         },
         {
           img: require("@/assets/1585896738615.jpg"),
-          title: "Finding the truth in this case."
+          title: "Finding the truth in the case."
         }
       ]
     };
@@ -44,7 +45,15 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baloo+Paaji+2:wght@500&family=Noto+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baloo+Paaji+2:wght@500&family=Noto+Sans:ital,wght@0,700;1,700&display=swap");
+.stayupdated {
+  font-family: "Noto Sans:italic", sans-serif;
+  font-weight: 700;
+  position: relative;
+  font-size: 700%;
+  top: 42px;
+  z-index: 2;
+}
 .mainImg {
   z-index: 1;
 }
