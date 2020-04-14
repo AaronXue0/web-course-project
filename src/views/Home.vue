@@ -6,12 +6,9 @@
     </v-row>
     <Products />
     <v-row justify="center">
-      <v-icon class="chevron" size="100">mdi-chevron-down</v-icon>
+      <v-icon class="chevron-1" size="100">mdi-chevron-down</v-icon>
     </v-row>
     <Intro />
-    <v-row justify="center">
-      <v-icon class="chevron" size="100">mdi-chevron-down</v-icon>
-    </v-row>
   </div>
 </template>
 
@@ -33,7 +30,12 @@ export default {
 <style>
 .chevron {
   position: relative;
-  padding-top: 2%;
+  padding-top: 5%;
   padding-bottom: 0%;
+}
+.chevron-1 {
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 </style>
