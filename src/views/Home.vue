@@ -9,6 +9,9 @@
       <v-icon class="chevron" size="100">mdi-chevron-down</v-icon>
     </v-row>
     <Intro />
+    <v-row justify="center">
+      <v-icon class="chevron" size="100">mdi-chevron-down</v-icon>
+    </v-row>
   </div>
 </template>
 

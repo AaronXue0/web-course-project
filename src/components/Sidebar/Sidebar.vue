@@ -1,15 +1,22 @@
 <template>
   <v-app class="sidebar hidden-md-and-down">
     <v-app class="sidebar-l">
-      <v-btn icon v-for="(item, index) in contactIcons" :key="index" to>
+      <v-btn
+        icon
+        v-for="(item, index) in contactIcons"
+        :key="index"
+        href="https://youtube.com"
+      >
         <v-icon class="side-icon">{{ item.icon }}</v-icon>
       </v-btn>
       <span class="contact-text">find us on</span>
     </v-app>
     <v-app class="sidebar-r">
-      <span class="contact-text-r"
-        >中 | <span class="en-span">EN</span> | 日 | 한</span
-      >
+      <span class="contact-text-r">
+        中 |
+        <span class="en-span">EN</span>
+        | 日 | 한
+      </span>
     </v-app>
   </v-app>
 </template>
@@ -31,7 +38,8 @@ export default {
         }
       ]
     };
-  }
+  },
+  methods: {}
 };
 </script>
 
@@ -39,18 +47,17 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baloo+Paaji+2:wght@500&family=Noto+Sans:wght@700&display=swap");
 .sidebar {
   position: fixed;
+  z-index: 999;
 }
 .sidebar-l {
   position: fixed;
   top: 35%;
   left: 2%;
-  z-index: 999;
 }
 .sidebar-r {
   position: fixed;
   top: 40%;
   right: 3%;
-  z-index: 999;
 }
 .side-icon {
   transform: rotate(270deg);
