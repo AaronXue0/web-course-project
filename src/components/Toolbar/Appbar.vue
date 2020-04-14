@@ -24,7 +24,7 @@ export default {
 
   data() {
     return {
-      starryIcon: "mdi-crop-square",
+      starryIcon: "mdi-crop-free",
       toolbar: [
         { content: "about" },
         { content: "members" },

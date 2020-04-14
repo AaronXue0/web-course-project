@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Poster />
+    <v-row justify="center">
+      <v-icon class="chevron" size="100">mdi-chevron-down</v-icon>
+    </v-row>
+    <Products />
+    <v-row justify="center">
+      <v-icon class="chevron" size="100">mdi-chevron-down</v-icon>
+    </v-row>
+    <Poster />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Poster from "@/components/Home/Poster.vue";
+import Products from "@/components/Home/Products.vue";
 
 export default {
-  name: "Home",
   components: {
-    HelloWorld
+    Poster,
+    Products
   }
 };
 </script>
+
+<style>
+.chevron {
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 0%;
+}
+</style>

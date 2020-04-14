@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <Appbar />
-    <Sidebar />
     <v-content>
       <home />
     </v-content>
@@ -10,7 +9,7 @@
 
 <script>
 import Appbar from "@/components/Toolbar/index.vue";
-import home from "@/components/HelloWorld.vue";
+import home from "@/views/Home.vue";
 
 export default {
   name: "App",
