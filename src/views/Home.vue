@@ -2,7 +2,9 @@
   <div class="home">
     <Poster />
     <v-row justify="center">
-      <v-icon class="chevron" size="100">mdi-chevron-down</v-icon>
+      <v-icon class="chevron" size="100" @mousedown="test()"
+        >mdi-chevron-down</v-icon
+      >
     </v-row>
     <Products />
     <v-row justify="center">
@@ -23,19 +25,25 @@ export default {
     Poster,
     Products,
     Intro
+  },
+  methods: {
+    test() {
+      alert(1);
+    }
   }
 };
 </script>
 
 <style>
 .chevron {
+  background-color: transparent;
   position: relative;
   padding-top: 5%;
   padding-bottom: 0%;
 }
 .chevron-1 {
   position: relative;
-  padding-top: 5%;
+  padding-top: 2%;
   padding-bottom: 5%;
 }
 </style>

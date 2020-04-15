@@ -1,23 +1,25 @@
 <template>
-  <v-container>
-    <h1 class="stayupdated">Stay Updated</h1>
-    <v-row class="text-center" justify="center" align="start">
-      <v-col cols="4" v-for="(item, index) in products" :key="index">
-        <v-img :src="item.img" width="100%" class="mainImg"></v-img>
-        <div class="attach">
-          <span class="date">
-            <i>Mar. 31th, 2020</i>
+  <v-app>
+    <v-container>
+      <h1 class="stayupdated">Stay Updated</h1>
+      <v-row class="text-center" justify="center" align="start">
+        <v-col cols="4" v-for="(item, index) in products" :key="index">
+          <v-img :src="item.img" width="100%" class="mainImg"></v-img>
+          <div class="attach">
+            <span class="date">
+              <i>Mar. 31th, 2020</i>
+            </span>
+            <span class="event">
+              <i>#Game</i>
+            </span>
+          </div>
+          <span class="title">
+            <b>{{ item.title }}</b>
           </span>
-          <span class="event">
-            <i>#Game</i>
-          </span>
-        </div>
-        <span class="title">
-          <b>{{ item.title }}</b>
-        </span>
-      </v-col>
-    </v-row>
-  </v-container>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app>
 </template>
 
 <script>
