@@ -8,12 +8,14 @@
     <div class="toolbar-div">
       <v-btn
         text
-        color="black"
+        color="white"
         v-for="(item, index) in toolbar"
         :key="index"
         class="mark"
-        >{{ item.content }}</v-btn
+        :to="{ name: item.content }"
       >
+        <span class="appbar-item-btn">{{ item.content }}</span>
+      </v-btn>
     </div>
   </v-app-bar>
 </template>
@@ -25,11 +27,7 @@ export default {
   data() {
     return {
       starryIcon: "mdi-crop-free",
-      toolbar: [
-        { content: "about" },
-        { content: "members" },
-        { content: "games" }
-      ]
+      toolbar: [{ content: "home" }, { content: "about" }, { content: "games" }]
     };
   }
 };
@@ -60,8 +58,14 @@ export default {
   border-radius: 0;
   border-color: transparent;
 }
+.routerlink {
+  color: white;
+}
 .mark:hover {
   background: linear-gradient(to top, #ffca28 50%, transparent 50%);
   border-radius: 0;
+}
+.appbar-item-btn {
+  color: black;
 }
 </style>

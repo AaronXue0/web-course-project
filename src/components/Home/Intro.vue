@@ -36,7 +36,7 @@ export default {
       slides: [
         { src: require("@/assets/backgroundimg3.jpg") },
         { src: require("@/assets/backgroundimg2.jpg") },
-        { src: require("@/assets/backgroundimg3.jpg") }
+        { src: require("@/assets/backgroundimg4.jpg") }
       ]
     };
   }
