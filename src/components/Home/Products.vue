@@ -30,7 +30,7 @@ export default {
         {
           img: require("@/assets/1585896761540.jpg"),
           title:
-            "Revel the world of lomo. The plan of reveling each hundred subscribe."
+            "Revel the world of lomo. The plan of reveling each hundred subscribes."
         },
         {
           img: require("@/assets/1585896728275.jpg"),

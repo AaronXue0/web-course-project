@@ -1,24 +1,29 @@
 <template>
-  <v-app class="sidebar hidden-md-and-down">
-    <v-app class="sidebar-l">
-      <v-btn
+  <div class="sidebar hidden-md-and-down">
+    <div class="sidebar-l">
+      <!-- <v-btn
         icon
-        v-for="(item, index) in contactIcons"
-        :key="index"
+        
         href="https://youtube.com"
       >
         <v-icon class="side-icon">{{ item.icon }}</v-icon>
-      </v-btn>
+      </v-btn>-->
+      <div v-for="(item, index) in contactIcons" :key="index">
+        <v-btn icon>
+          <v-icon class="side-icon">{{ item.icon }}</v-icon>
+        </v-btn>
+        <br />
+      </div>
       <span class="contact-text">find us on</span>
-    </v-app>
-    <v-app class="sidebar-r">
+    </div>
+    <div class="sidebar-r">
       <span class="contact-text-r">
         中 |
         <span class="en-span">EN</span>
         | 日 | 한
       </span>
-    </v-app>
-  </v-app>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -60,13 +65,15 @@ export default {
   right: 3%;
 }
 .side-icon {
+  position: relative;
   transform: rotate(270deg);
 }
 .contact-text {
   position: relative;
-  top: 2%;
+  top: 5px;
+  left: 10px;
   writing-mode: vertical-lr;
-  text-orientation: sideways;
+  text-orientation: mi;
   transform: rotate(180deg);
   letter-spacing: 3px;
 }
