@@ -5,6 +5,7 @@
       <Home />
     </v-content>
     <Footer />
+    <BottomCard />
   </v-app>
 </template>
 
@@ -12,6 +13,7 @@
 import Appbar from "@/components/Toolbar/index.vue";
 import Home from "@/views/Home.vue";
 import Footer from "@/components/Footer/Footer.vue";
+import BottomCard from "@/components/Footer/BottomCard.vue";
 
 export default {
   name: "App",
@@ -19,7 +21,8 @@ export default {
   components: {
     Appbar,
     Home,
-    Footer
+    Footer,
+    BottomCard
   }
 };
 </script>

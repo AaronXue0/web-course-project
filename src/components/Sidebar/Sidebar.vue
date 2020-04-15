@@ -1,13 +1,6 @@
 <template>
   <div class="sidebar hidden-md-and-down">
     <div class="sidebar-l">
-      <!-- <v-btn
-        icon
-        
-        href="https://youtube.com"
-      >
-        <v-icon class="side-icon">{{ item.icon }}</v-icon>
-      </v-btn>-->
       <div v-for="(item, index) in contactIcons" :key="index">
         <v-btn icon>
           <v-icon class="side-icon">{{ item.icon }}</v-icon>
