@@ -1,15 +1,67 @@
 <template>
   <v-app class="game">
     <v-container>
-      <h1 class="about-title-right">Project Starry</h1>
-      <h1 class="about-title">No Game, No Life</h1>
-      <h1 class="about-title-opacity">No Game, No Life</h1>
+      <v-row justify="center">
+        <h1 class="game-title-h1">Games are Works of Art</h1>
+      </v-row>
+    </v-container>
+    <v-container class="games-intro">
+      <v-row
+        v-for="(item, index) in gameList"
+        :key="index"
+        class="games-intro-content"
+      >
+        <v-col cols="3"></v-col>
+        <v-col cols="3" class="game-info-col">
+          <span>{{ item.clue }}</span>
+          <h1 class="game-name-h1">{{ item.name }}</h1>
+          <br v-for="i in 3" :key="i" />
+          <span>{{ item.platform }}</span>
+          <br />
+          <span> First Released: {{ item.release }}</span>
+        </v-col>
+        <v-col cols="6">
+          <v-avatar height="250px" width="250px" class="game-avatar-img">
+            <img :src="item.img" />
+          </v-avatar>
+        </v-col>
+      </v-row>
     </v-container>
   </v-app>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      gameList: [
+        {
+          type: "App Game",
+          name: "Lomo",
+          clue: "what happend here?",
+          platform: "iOS, Android",
+          release: "Nov 2019",
+          img: require("@/assets/1585896770673.jpg")
+        },
+        {
+          type: "App Game",
+          name: "Lomo",
+          clue: "what happend here?",
+          platform: "iOS, Android",
+          release: "Nov 2019",
+          img: require("@/assets/1585896770673.jpg")
+        },
+        {
+          type: "App Game",
+          name: "Lomo",
+          clue: "what happend here?",
+          platform: "iOS, Android",
+          release: "Nov 2019",
+          img: require("@/assets/1585896770673.jpg")
+        }
+      ]
+    };
+  },
   methods: {
     changeTitle() {
       document.title = "Game | Project Starry";
@@ -25,5 +77,29 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap");
 .game {
   font-family: "Noto Sans TC", sans-serif;
+}
+.game-title-h1 {
+  font-size: 80px;
+}
+.games-intro {
+  position: relative;
+  padding-bottom: 10%;
+}
+.games-intro-content {
+  position: relative;
+  padding-bottom: 2%;
+}
+.game-info-col {
+  position: relative;
+  top: 25px;
+  float: right;
+  z-index: 2;
+}
+.game-name-h1 {
+  font-size: 35px;
+}
+.game-avatar-img {
+  position: relative;
+  left: -5em;
 }
 </style>

@@ -3,7 +3,7 @@
     <v-container>
       <h1 class="about-title-right">Project Starry</h1>
       <h1 class="about-title">No Game, No Life</h1>
-      <h1 class="about-title-opacity">No Game, No Life</h1>
+      <h1 class="about-title-mirror">No Game, No Life</h1>
     </v-container>
     <v-container>
       <v-parallax :src="require('@/assets/starry-test-l.png')"></v-parallax>
@@ -84,7 +84,7 @@ export default {
   position: relative;
   font-size: 45px;
 }
-.about-title-opacity {
+.about-title-mirror {
   position: relative;
   top: -30px;
   opacity: 0.1;
