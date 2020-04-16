@@ -13,17 +13,34 @@
       >
         <v-col cols="3"></v-col>
         <v-col cols="3" class="game-info-col">
-          <span>{{ item.clue }}</span>
-          <h1 class="game-name-h1">{{ item.name }}</h1>
-          <br v-for="i in 3" :key="i" />
-          <span>{{ item.platform }}</span>
-          <br />
-          <span> First Released: {{ item.release }}</span>
+          <div v-if="index % 2 == 0">
+            <span>{{ item.clue }}</span>
+            <h1 class="game-name-h1">{{ item.name }}</h1>
+            <br v-for="i in 3" :key="i" />
+            <span>{{ item.platform }}</span>
+            <br />
+            <span> First Released: {{ item.release }}</span>
+          </div>
+          <div v-else>
+            <v-avatar height="250px" width="250px" class="game-avatar-img-left">
+              <img :src="item.img" />
+            </v-avatar>
+          </div>
         </v-col>
         <v-col cols="6">
-          <v-avatar height="250px" width="250px" class="game-avatar-img">
-            <img :src="item.img" />
-          </v-avatar>
+          <div v-if="index % 2 == 0">
+            <v-avatar height="250px" width="250px" class="game-avatar-img">
+              <img :src="item.img" />
+            </v-avatar>
+          </div>
+          <div v-else class="info-right">
+            <span>{{ item.clue }}</span>
+            <h1 class="game-name-h1">{{ item.name }}</h1>
+            <br v-for="i in 3" :key="i" />
+            <span>{{ item.platform }}</span>
+            <br />
+            <span> First Released: {{ item.release }}</span>
+          </div>
         </v-col>
         <div justify="center" class="chevron-game"></div>
       </v-row>
@@ -46,19 +63,19 @@ export default {
         },
         {
           type: "App Game",
-          name: "Lomo",
+          name: "Writer",
           clue: "what happend here?",
           platform: "iOS, Android",
           release: "Nov 2019",
-          img: require("@/assets/1585896770673.jpg")
+          img: require("@/assets/1585896785150.jpg")
         },
         {
           type: "App Game",
-          name: "Lomo",
+          name: "Memory Void",
           clue: "what happend here?",
-          platform: "iOS, Android",
-          release: "Nov 2019",
-          img: require("@/assets/1585896770673.jpg")
+          platform: "PC, PS4, Switch",
+          release: "Nov 2020",
+          img: require("@/assets/1585896761540.jpg")
         }
       ]
     };
@@ -96,12 +113,20 @@ export default {
   float: right;
   z-index: 2;
 }
+.info-right {
+  position: relative;
+  top: 3em;
+}
 .game-name-h1 {
   font-size: 35px;
 }
 .game-avatar-img {
   position: relative;
   left: -5em;
+}
+.game-avatar-img-left {
+  position: relative;
+  right: 0em;
 }
 .chevron-game {
   position: relative;

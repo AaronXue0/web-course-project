@@ -2,11 +2,12 @@
   <div class="home hidden-md-and-down">
     <Poster />
     <v-row justify="center" class="chevron">
-      <v-btn color="white" icon>
+      <v-btn color="white" icon @click="scrollToId(products)">
         <v-icon size="100" color="black">mdi-chevron-down</v-icon>
       </v-btn>
     </v-row>
     <Products />
+    <div id="products"></div>
     <v-row justify="center" class="chevron-1">
       <v-btn color="white" icon>
         <v-icon size="100" color="black">mdi-chevron-down</v-icon>
@@ -29,6 +30,9 @@ export default {
     Intro
   },
   methods: {
+    scrollToId(el) {
+      document.getElementById(el).scrollIntoView();
+    },
     changeTitle() {
       document.title = "Home | Project Starry";
     }
