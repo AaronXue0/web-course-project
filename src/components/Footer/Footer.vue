@@ -1,5 +1,11 @@
 <template>
-  <v-card color="#1b1b1b" dark height="100%" width="100%" class="footer-card">
+  <v-card
+    color="#1b1b1b"
+    dark
+    height="100%"
+    width="100%"
+    class="footer-card hidden-md-and-down"
+  >
     <v-img
       :src="require('@/assets/logo-b.png')"
       class="starry-img-icon"

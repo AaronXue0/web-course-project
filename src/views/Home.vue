@@ -1,14 +1,16 @@
 <template>
-  <div class="home">
+  <div class="home hidden-md-and-down">
     <Poster />
-    <v-row justify="center">
-      <v-icon class="chevron" size="100" @mousedown="test()"
-        >mdi-chevron-down</v-icon
-      >
+    <v-row justify="center" class="chevron">
+      <v-btn color="white" icon>
+        <v-icon size="100" color="black">mdi-chevron-down</v-icon>
+      </v-btn>
     </v-row>
     <Products />
-    <v-row justify="center">
-      <v-icon class="chevron-1" size="100">mdi-chevron-down</v-icon>
+    <v-row justify="center" class="chevron-1">
+      <v-btn color="white" icon>
+        <v-icon size="100" color="black">mdi-chevron-down</v-icon>
+      </v-btn>
     </v-row>
     <Intro />
   </div>
@@ -27,9 +29,12 @@ export default {
     Intro
   },
   methods: {
-    test() {
-      alert(1);
+    changeTitle() {
+      document.title = "Home | Project Starry";
     }
+  },
+  mounted() {
+    this.changeTitle();
   }
 };
 </script>

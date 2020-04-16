@@ -1,11 +1,11 @@
 <template>
-  <v-app-bar app color="white" dense elevation="0">
-    <div class="custom-starry-icon">
+  <v-app-bar app color="white" dense elevation="0" shrink-on-scroll>
+    <div class="custom-starry-icon" id="shrink-icon" v-on="handleScroll">
       <v-icon large class="custom-starry-icon-left">{{ starryIcon }}</v-icon>
       <v-icon large class="custom-starry-icon-right">{{ starryIcon }}</v-icon>
     </div>
     <v-spacer />
-    <div class="toolbar-div">
+    <div class="toolbar-div" id="shrink-btns" v-on="handleScroll">
       <v-btn
         text
         color="white"
@@ -29,18 +29,40 @@ export default {
       starryIcon: "mdi-crop-free",
       toolbar: [{ content: "home" }, { content: "about" }, { content: "games" }]
     };
+  },
+  methods: {
+    handleScroll() {
+      if (
+        document.body.scrollTop > 5 ||
+        document.documentElement.scrollTop > 5
+      ) {
+        let s = "10%";
+        document.getElementById("shrink-icon").style.top = s;
+        document.getElementById("shrink-btns").style.top = s;
+      } else {
+        let s = "35%";
+        document.getElementById("shrink-icon").style.top = s;
+        document.getElementById("shrink-btns").style.top = s;
+      }
+    }
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
 
 <style>
 .custom-starry-icon {
-  padding-left: 100px;
   position: relative;
+  padding-left: 100px;
 }
 .custom-starry-icon-left {
-  transform: rotate(45deg);
   position: absolute;
+  transform: rotate(45deg);
   z-index: 1;
 }
 .custom-starry-icon-right {
@@ -49,8 +71,8 @@ export default {
   left: -25px;
 }
 .toolbar-div {
-  padding-right: 100px;
   position: relative;
+  padding-right: 100px;
 }
 .v-btn:hover:before {
   color: transparent;
