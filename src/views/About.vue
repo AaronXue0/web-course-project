@@ -12,8 +12,15 @@
       ></v-parallax>
       <div class="about-div-card"></div>
       <div class="about-div-card-two"></div>
+      <div id="div-empty"></div>
       <br v-for="i in 3" :key="i" />
-      <v-btn icon color="white" class="scroll-down-icon" large>
+      <v-btn
+        icon
+        color="white"
+        class="scroll-down-icon"
+        large
+        @click="scrollToId('div-empty')"
+      >
         <v-icon color="black">mdi-menu-down</v-icon>
       </v-btn>
       <v-row justify="center" align="center">
@@ -71,6 +78,9 @@
 <script>
 export default {
   methods: {
+    scrollToId(el) {
+      document.getElementById(String(el)).scrollIntoView();
+    },
     changeTitle() {
       document.title = "About | Project Starry";
     }

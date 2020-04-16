@@ -2,17 +2,18 @@
   <div class="home hidden-md-and-down">
     <Poster />
     <v-row justify="center" class="chevron">
-      <v-btn color="white" icon @click="scrollToId(products)">
+      <v-btn color="white" icon @click="scrollToId('products-empty')">
         <v-icon size="100" color="black">mdi-chevron-down</v-icon>
       </v-btn>
     </v-row>
+    <div id="products-empty"></div>
     <Products />
-    <div id="products"></div>
     <v-row justify="center" class="chevron-1">
-      <v-btn color="white" icon>
+      <v-btn color="white" icon @click="scrollToId('intro-empty')">
         <v-icon size="100" color="black">mdi-chevron-down</v-icon>
       </v-btn>
     </v-row>
+    <div id="intro-empty" class="empty-intro-pos"></div>
     <Intro />
   </div>
 </template>
@@ -31,7 +32,7 @@ export default {
   },
   methods: {
     scrollToId(el) {
-      document.getElementById(el).scrollIntoView();
+      document.getElementById(String(el)).scrollIntoView();
     },
     changeTitle() {
       document.title = "Home | Project Starry";
@@ -54,5 +55,9 @@ export default {
   position: relative;
   padding-top: 2%;
   padding-bottom: 5%;
+}
+.empty-intro-pos {
+  position: relative;
+  top: -4em;
 }
 </style>
