@@ -6,7 +6,13 @@
       <h1 class="about-title-mirror">No Game, No Life</h1>
     </v-container>
     <v-container>
-      <v-parallax :src="require('@/assets/starry-test-l.png')"></v-parallax>
+      <v-parallax
+        :src="require('@/assets/starry-test-l.png')"
+        style="z-index: 2;opacity: 0.9"
+      ></v-parallax>
+      <div class="about-div-card"></div>
+      <div class="about-div-card-two"></div>
+      <br v-for="i in 3" :key="i" />
       <v-btn icon color="white" class="scroll-down-icon" large>
         <v-icon color="black">mdi-menu-down</v-icon>
       </v-btn>
@@ -89,6 +95,24 @@ export default {
   top: -30px;
   opacity: 0.1;
   font-size: 45px;
+}
+.about-div-card {
+  position: relative;
+  top: -530px;
+  right: -900px;
+  background: rgba(255, 202, 40, 0.5);
+  height: 300px;
+  width: 300px;
+  margin-bottom: -300px;
+}
+.about-div-card-two {
+  position: relative;
+  top: -285px;
+  left: -15px;
+  background: rgba(255, 202, 40, 0.9);
+  height: 300px;
+  width: 300px;
+  margin-bottom: -300px;
 }
 .scroll-down-icon {
   position: relative;

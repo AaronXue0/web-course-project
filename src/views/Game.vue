@@ -25,6 +25,7 @@
             <img :src="item.img" />
           </v-avatar>
         </v-col>
+        <div justify="center" class="chevron-game"></div>
       </v-row>
     </v-container>
   </v-app>
@@ -101,5 +102,10 @@ export default {
 .game-avatar-img {
   position: relative;
   left: -5em;
+}
+.chevron-game {
+  position: relative;
+  padding-top: 8%;
+  padding-bottom: 8%;
 }
 </style>
