@@ -2,7 +2,7 @@
   <div class="sidebar hidden-md-and-down">
     <div class="sidebar-l">
       <div v-for="(item, index) in contactIcons" :key="index">
-        <v-btn icon>
+        <v-btn icon :href="item.href">
           <v-icon class="side-icon">{{ item.icon }}</v-icon>
         </v-btn>
         <br />
@@ -27,8 +27,8 @@ export default {
     return {
       starryIcon: "mdi-crop-square",
       contactIcons: [
-        { icon: "mdi-youtube", href: "" },
-        { icon: "mdi-twitter", href: "" },
+        { icon: "mdi-youtube", href: "https://youtube.com" },
+        { icon: "mdi-twitter", href: "https://twitter.com/projectstarry1" },
         {
           icon: "mdi-facebook",
           href:

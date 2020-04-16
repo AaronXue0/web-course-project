@@ -52,7 +52,12 @@
         <v-row class="find-us-row">
           Find Us On
           <div class="find-us-icon-div">
-            <v-btn icon v-for="(item, index) in contactIcons" :key="index">
+            <v-btn
+              icon
+              v-for="(item, index) in contactIcons"
+              :key="index"
+              :href="contactIcons[2 - index].href"
+            >
               <v-icon>{{ contactIcons[2 - index].icon }}</v-icon>
             </v-btn>
           </div>
@@ -70,8 +75,8 @@ export default {
     return {
       starryIcon: "mdi-crop-square",
       contactIcons: [
-        { icon: "mdi-youtube", href: "" },
-        { icon: "mdi-twitter", href: "" },
+        { icon: "mdi-youtube", href: "https://youtube.com" },
+        { icon: "mdi-twitter", href: "https://twitter.com/projectstarry1" },
         {
           icon: "mdi-facebook",
           href:
