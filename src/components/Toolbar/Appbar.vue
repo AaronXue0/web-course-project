@@ -51,6 +51,9 @@ export default {
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
+  },
+  mounted() {
+    this.handleScroll();
   }
 };
 </script>

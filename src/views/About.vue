@@ -65,7 +65,7 @@
             Garthing the indie game creators, we build the world we want.
           </h4>
           <h4 class="about-aritcle-h4">
-            The venture studio is also what we fousc on. Here, we’ve actualized
+            The venture studio is also what we focus on. Here, we’ve actualized
             the idea of games within life, and life within games.
           </h4>
         </v-col>
