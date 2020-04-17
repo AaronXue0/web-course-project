@@ -1,5 +1,5 @@
 <template>
-  <v-app class="game">
+  <v-app class="game hidden-md-and-down">
     <v-container>
       <v-row justify="center">
         <h1 class="game-title-h1">Games are Works of Art</h1>
