@@ -1,32 +1,36 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app>
+    <appbar class="Noto" />
+    <v-container>
+      <router-view></router-view>
+    </v-container>
+    <foot class="Noto" />
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import appbar from "@/components/appbar/index.vue";
+import foot from "@/components/footer/index.vue";
+export default {
+  name: "App",
+  components: {
+    appbar,
+    foot,
+  },
+  mounted() {
+    this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+  },
+};
+</script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.Noto {
+  font-family: "Noto Sans", sans-serif;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.Press2P {
+  font-family: "Press Start 2P", cursive;
 }
 </style>
