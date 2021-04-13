@@ -1,7 +1,7 @@
 <template>
   <v-app-bar elevation="0" color="black" dense>
-    <desktop class="hidden-xs-and-down" :contents="contents" />
-    <mobile class="hidden-sm-and-up" :contents="contents" />
+    <mobile v-if="is_screen_small" :contents="contents" />
+    <desktop v-else :contents="contents" />
   </v-app-bar>
 </template>
 
@@ -24,6 +24,11 @@ export default {
         ],
       },
     };
+  },
+  computed: {
+    is_screen_small() {
+      return this.$vuetify.breakpoint.xsOnly;
+    },
   },
 };
 </script>

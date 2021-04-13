@@ -1,5 +1,8 @@
 <template>
-  <v-parallax :src="require('@/assets/sob-series/loading.png')"></v-parallax>
+  <v-parallax
+    :src="require('@/assets/sob-series/loading.png')"
+    height="100%"
+  ></v-parallax>
 </template>
 
 <script>
