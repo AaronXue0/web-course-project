@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import index from "@/components/sob/index.vue";
+import index from "@/components/home/index.vue";
 export default {
   name: "Home",
   components: { index },

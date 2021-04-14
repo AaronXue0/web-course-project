@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import mobile from "@/components/sob/mobile.vue";
-import pad from "@/components/sob/pad.vue";
-import desktop from "@/components/sob/desktop.vue";
+import mobile from "@/components/home/mobile.vue";
+import pad from "@/components/home/pad.vue";
+import desktop from "@/components/home/desktop.vue";
 export default {
   components: { desktop, mobile, pad },
   data() {
