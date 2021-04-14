@@ -1,8 +1,26 @@
 <template>
-  <v-app-bar elevation="0" color="black" dense>
-    <mobile v-if="is_screen_small" :contents="contents" />
-    <desktop v-else :contents="contents" />
-  </v-app-bar>
+  <div>
+    <v-app-bar
+      elevation="0"
+      color="transparent"
+      dense
+      height="70px"
+      hide-on-scroll
+      fixed
+    >
+      <mobile v-if="is_screen_small" :contents="contents" />
+      <desktop v-else :contents="contents" />
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawerState" dark fixed app right>
+      <v-list nav dense>
+        <v-list-item-group>
+          <v-list-item v-for="(item, index) in contents.items" :key="index">
+            <v-btn text :to="item.url">{{ item.name }}</v-btn>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
 </template>
 
 <script>
@@ -15,8 +33,9 @@ export default {
   },
   data() {
     return {
+      drawer: true,
       contents: {
-        logo: require("@/assets/old starry logo b.png"),
+        logo: require("@/assets/STARRY white logo.png"),
         items: [
           { name: "About", url: "About" },
           { name: "Contact", url: "Contact" },
@@ -27,8 +46,22 @@ export default {
   },
   computed: {
     is_screen_small() {
-      return this.$vuetify.breakpoint.xsOnly;
+      // ['xs', 'sm'].includes(this.$vuetify.breakpoint.name);
+      return this.$vuetify.breakpoint.xs;
     },
+    drawerState: {
+      get() {
+        return this.$store.state.drawer;
+      },
+      set(val) {
+        this.$store.commit("setDrawerState", val);
+      },
+    },
+  },
+  mounted() {
+    this.$store.commit("setDrawerState", false);
   },
 };
 </script>
+
+<style></style>

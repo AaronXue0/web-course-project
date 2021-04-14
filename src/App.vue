@@ -1,10 +1,10 @@
 <template>
   <v-app>
     <appbar class="Noto" />
-    <v-container>
+    <v-parallax height="100px" :src="require('@/assets/backgroundImage.png')">
       <router-view></router-view>
-    </v-container>
-    <foot class="Noto" />
+      <foot class="Noto" />
+    </v-parallax>
   </v-app>
 </template>
 
@@ -13,13 +13,14 @@ import appbar from "@/components/appbar/index.vue";
 import foot from "@/components/footer/index.vue";
 export default {
   name: "App",
+  data() {
+    return {};
+  },
   components: {
     appbar,
     foot,
   },
-  mounted() {
-    this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-  },
+  computed: {},
 };
 </script>
 

@@ -1,11 +1,10 @@
 <template>
   <div>
     <v-card-title class="Noto">
-      <v-card elevation="0">
-        <v-btn color="white" text to="/">
-          <v-img :src="contents.logo" width="150" />
-        </v-btn>
-      </v-card>
+      <v-btn color="transparent" dark text to="/" elevation="0">
+        <v-img :src="contents.logo" width="150" />
+      </v-btn>
+
       <v-btn
         text
         small
@@ -39,5 +38,10 @@ export default {
 .mark:hover {
   background: linear-gradient(to top, #1d3a50 50%, transparent 50%);
   border-radius: 0;
+}
+
+.logo-btn {
+  position: relative;
+  top: 10px;
 }
 </style>

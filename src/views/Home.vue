@@ -1,16 +1,26 @@
 <template>
   <v-app class="home">
-    <sob />
+    <index />
   </v-app>
 </template>
 
 <script>
-import sob from "@/components/sob/index.vue";
+import index from "@/components/sob/index.vue";
 export default {
   name: "Home",
-  components: {
-    sob,
-  },
+  components: { index },
   mounted() {},
 };
 </script>
+
+<style>
+.home {
+  background-color: transparent !important;
+}
+</style>
+
+<style>
+.home {
+  max-height: 764px;
+}
+</style>

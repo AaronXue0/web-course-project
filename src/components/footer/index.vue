@@ -1,6 +1,6 @@
 <template>
-  <v-footer padless outlined height="70px" color="secondary" fixed>
-    <v-card class="flex" width="120%" elevation="0">
+  <v-footer padless outlined height="70px" color="transparent" fixed>
+    <v-card color="transparent" width="120%" elevation="0">
       <v-card-title class="ma-2">
         <v-col style="position: relative; top: -17px">
           <v-row>
@@ -46,13 +46,13 @@ export default {
     return {
       media: [
         {
-          icon: "fab fa-facebook-f",
+          icon: "mdi-facebook",
           linking: "https://www.facebook.com/Game-Starry-109356847225732",
         },
         { icon: "mdi-twitter", linking: "https://twitter.com/projectstarry1" },
         {
           icon: "mdi-instagram",
-          linking: "https://twitter.com/projectstarry1",
+          linking: "https://www.instagram.com/starrycom/?hl=en",
         },
       ],
     };
@@ -65,12 +65,6 @@ export default {
 <style>
 .footer {
   background-color: linear-gradient(to bottom right, #1d3a50, #504b79);
-}
-.payButton {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
 }
 
 .iconColor {
