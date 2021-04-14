@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <div style="display: block; height: 70px"></div>
+    <div style="display: block; height: 90px"></div>
     <v-row justify="center" align="center">
-      <v-card color="transparent" width="94%">
+      <v-card color="transparent" width="70%">
         <carousel :carouselItems="carouselItems" />
       </v-card>
     </v-row>

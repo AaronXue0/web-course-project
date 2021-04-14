@@ -67,7 +67,11 @@ export default {
       model: 0,
     };
   },
-  methods: {},
+  methods: {
+    setModel(val) {
+      this.model = val;
+    },
+  },
   computed: {
     modelNext() {
       return (this.model + 1) % this.carouselItems.length;
