@@ -1,25 +1,30 @@
 <template>
-  <div class="sob">
-    <div style="display: block; height: 90px"></div>
-    fwqf
-    <div style="display: block; height: 90px"></div>
+  <div>
+    <mobile v-if="is_screen_small" :contents="contents" />
+    <pad v-else-if="is_screen_middle" :contents="contents" />
+    <desktop v-else :contents="contents" />
   </div>
 </template>
 
 <script>
+import mobile from "@/components/sob/mobile.vue";
+import pad from "@/components/sob/pad.vue";
+import desktop from "@/components/sob/desktop.vue";
 export default {
-  props: [],
-  components: {},
+  components: { desktop, mobile, pad },
   data() {
-    return {};
+    return {
+      contents: [],
+    };
   },
   methods: {},
+  computed: {
+    is_screen_small() {
+      return this.$vuetify.breakpoint.xs;
+    },
+    is_screen_middle() {
+      return this.$vuetify.breakpoint.md || this.$vuetify.breakpoint.sm;
+    },
+  },
 };
 </script>
-
-<style>
-.sob {
-  background-color: transparent !important;
-  max-height: 1528px;
-}
-</style>

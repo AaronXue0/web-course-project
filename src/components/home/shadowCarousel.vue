@@ -9,11 +9,13 @@
       class="custom"
       v-model="model"
     >
-      <v-carousel-item
-        v-for="(item, i) in carouselItems"
-        :key="i"
-        :src="item.src"
-      ></v-carousel-item>
+      <router-link :to="{ name: 'sob' }">
+        <v-carousel-item
+          v-for="(item, i) in carouselItems"
+          :key="i"
+          :src="item.src"
+        ></v-carousel-item>
+      </router-link>
     </v-carousel>
     <v-toolbar elevation="0" color="transparent">
       <v-spacer />
