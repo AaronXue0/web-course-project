@@ -3,8 +3,10 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
+import imagePreloader from "vue-image-preloader";
 
 Vue.use(vuetify);
+Vue.use(imagePreloader);
 Vue.config.productionTip = false;
 
 new Vue({

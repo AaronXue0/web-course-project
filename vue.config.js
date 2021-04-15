@@ -4,15 +4,7 @@ module.exports = {
   pluginOptions: {
     prerenderSpa: {
       registry: undefined,
-      renderRoutes: [
-        "/",
-        "/About",
-        "Contact",
-        "/about",
-        "/contact",
-        "/games",
-        "/sob",
-      ],
+      renderRoutes: ["/", "/about", "/contact", "/games", "/sob"],
       useRenderEvent: true,
       headless: true,
       onlyProduction: true,

@@ -5,6 +5,9 @@
       <router-view></router-view>
       <foot class="Noto" />
     </v-parallax>
+    <v-overlay :absolute="true" opacity="0.98" :value="overlay">
+      {{ loading }}%
+    </v-overlay>
   </v-app>
 </template>
 
@@ -14,13 +17,45 @@ import foot from "@/components/footer/index.vue";
 export default {
   name: "App",
   data() {
-    return {};
+    return {
+      overlay: true,
+      loading: "0",
+    };
   },
   components: {
     appbar,
     foot,
   },
+  methods: {
+    loadedOne(e) {
+      alert(e);
+      this.loading = e.progress;
+    },
+  },
   computed: {},
+  async mounted() {
+    this.$imagePreload("https://nodejs.org/static/images/logo.svg").then((r) =>
+      console.log(r)
+    ); // return loaded img element
+    await this.$imagePreload(
+      [
+        require("@/assets/poster1.png"),
+        require("@/assets/poster2.png"),
+        require("@/assets/poster3.png"),
+        require("@/assets/escape logo.png"),
+        require("@/assets/EscapeCG.png"),
+        require("@/assets/logo.png"),
+        require("@/assets/sob-cg.png"),
+        require("@/assets/about/art.gif"),
+        require("@/assets/about/program.gif"),
+        require("@/assets/about/music.gif"),
+      ],
+      (e) => {
+        this.loading = e.progress;
+        if (e.progress >= 99) this.overlay = false;
+      }
+    );
+  },
 };
 </script>
 
@@ -33,6 +68,14 @@ export default {
 }
 .Press2P {
   font-family: "Press Start 2P", cursive;
+}
+
+@font-face {
+  font-family: "SOB";
+  src: url("~@/assets/fonts/Please write me a song.ttf");
+}
+.contactForm {
+  font-family: "SOB", "Press Start 2P", cursive;
 }
 
 .v-parallax__image {
