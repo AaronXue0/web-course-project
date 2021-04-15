@@ -5,7 +5,7 @@
       <router-view></router-view>
       <foot class="Noto" />
     </v-parallax>
-    <v-overlay :absolute="true" opacity="0.98" :value="overlay">
+    <v-overlay :absolute="true" opacity="0.98" :value="overlay" class="SOBFont">
       {{ loading }}%
     </v-overlay>
   </v-app>
@@ -26,12 +26,7 @@ export default {
     appbar,
     foot,
   },
-  methods: {
-    loadedOne(e) {
-      alert(e);
-      this.loading = e.progress;
-    },
-  },
+  methods: {},
   computed: {},
   async mounted() {
     this.$imagePreload("https://nodejs.org/static/images/logo.svg").then((r) =>
@@ -74,7 +69,7 @@ export default {
   font-family: "SOB";
   src: url("~@/assets/fonts/Please write me a song.ttf");
 }
-.contactForm {
+.SOBFont {
   font-family: "SOB", "Press Start 2P", cursive;
 }
 

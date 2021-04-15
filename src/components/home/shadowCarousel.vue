@@ -36,6 +36,7 @@
       </v-btn>
       <v-spacer />
     </v-toolbar>
+
     <v-carousel
       delimiter-icon="mdi-radiobox-marked"
       :show-arrows="false"
