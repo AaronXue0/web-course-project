@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <appbar class="Noto" />
-    <v-parallax height="10%" :src="require('@/assets/backgroundImage.png')">
+    <v-parallax height="100%" :src="require('@/assets/backgroundImage.png')">
       <router-view></router-view>
       <foot class="Noto" />
     </v-parallax>
@@ -33,5 +33,9 @@ export default {
 }
 .Press2P {
   font-family: "Press Start 2P", cursive;
+}
+
+.v-parallax__image {
+  width: 100% !important;
 }
 </style>

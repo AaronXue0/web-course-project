@@ -15,9 +15,9 @@ export default {
   data() {
     return {
       carouselItems: [
-        { src: require("@/assets/poster1.png") },
-        { src: require("@/assets/poster2.png") },
         { src: require("@/assets/poster3.png") },
+        { src: require("@/assets/poster2.png") },
+        { src: require("@/assets/poster1.png") },
       ],
     };
   },

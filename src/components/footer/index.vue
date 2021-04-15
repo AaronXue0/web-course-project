@@ -1,5 +1,12 @@
 <template>
-  <v-footer padless outlined height="70px" color="transparent" fixed>
+  <v-footer
+    padless
+    outlined
+    height="70px"
+    class="flex"
+    color="transparent"
+    fixed
+  >
     <v-card color="transparent" width="120%" elevation="0">
       <v-card-title class="ma-2">
         <v-col style="position: relative; top: -17px">

@@ -3,6 +3,7 @@
     <v-app-bar
       elevation="0"
       color="transparent"
+      class="appbar-color"
       dense
       height="70px"
       hide-on-scroll
