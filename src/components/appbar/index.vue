@@ -13,9 +13,16 @@
     </v-app-bar>
     <v-navigation-drawer v-model="drawerState" dark fixed app right>
       <v-list nav dense>
-        <v-list-item-group>
-          <v-list-item v-for="(item, index) in contents.items" :key="index">
-            <v-btn text :to="item.url">{{ item.name }}</v-btn>
+        <v-list-item-group v-model="selectedItem">
+          <v-list-item
+            v-for="(item, index) in contents.items"
+            :key="index"
+            :value="item.active"
+            active-class="primary"
+          >
+            <v-btn color="transparent" text :to="item.url">
+              <span class="white--text">{{ item.name }} </span>
+            </v-btn>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -34,9 +41,11 @@ export default {
   data() {
     return {
       drawer: true,
+      selectedItem: 0,
       contents: {
         logo: require("@/assets/STARRY white logo.png"),
         items: [
+          { name: "Home", url: "/" },
           { name: "About", url: "About" },
           { name: "Contact", url: "Contact" },
           { name: "Games", url: "Games" },

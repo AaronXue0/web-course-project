@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import carousel from "@/components/home/carousel.vue";
+import carousel from "@/components/home/shadowCarousel.vue";
 export default {
   props: ["carouselItems"],
   components: { carousel },

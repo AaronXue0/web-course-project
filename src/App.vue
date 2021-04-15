@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <appbar class="Noto" />
-    <v-parallax height="100px" :src="require('@/assets/backgroundImage.png')">
+    <v-parallax height="10%" :src="require('@/assets/backgroundImage.png')">
       <router-view></router-view>
       <foot class="Noto" />
     </v-parallax>
