@@ -15,7 +15,7 @@
               style="white-space: nowrap"
             >
               {{ item.job }}
-              <small v-if="item.subjob"> || {{ item.subjob }}</small>
+              <small v-if="item.subjob"> | {{ item.subjob }}</small>
             </v-card-title>
             <v-img :src="item.src"></v-img>
             <v-card-subtitle
@@ -47,7 +47,6 @@ export default {
     let lines = this.lines;
     let length = this.stuffDatas.length;
     let step = length / lines;
-    console.log(length);
     for (let i = 0; i < lines; i++) {
       let array = [];
       for (let j = i * step; j < i * step + step; j++) {
@@ -55,7 +54,6 @@ export default {
       }
       this.datas.push(array);
     }
-    console.log(this.datas);
   },
 };
 </script>

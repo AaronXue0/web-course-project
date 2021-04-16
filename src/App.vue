@@ -37,7 +37,12 @@ export default {
         require("@/assets/poster1.png"),
         require("@/assets/poster2.png"),
         require("@/assets/poster3.png"),
+        require("@/assets/poster shadow.png"),
+        require("@/assets/poster shadow1.png"),
+        require("@/assets/poster shadow2.png"),
         require("@/assets/escape logo.png"),
+        require("@/assets/lobby.png"),
+        require("@/assets/lobby dark.png"),
         require("@/assets/EscapeCG.png"),
         require("@/assets/logo.png"),
         require("@/assets/sob-cg.png"),
@@ -46,7 +51,7 @@ export default {
         require("@/assets/about/music.gif"),
       ],
       (e) => {
-        this.loading = e.progress;
+        this.loading = Math.floor(e.progress * 100) / 100;
         if (e.progress >= 99) this.overlay = false;
       }
     );
@@ -70,7 +75,7 @@ export default {
   src: url("~@/assets/fonts/Please write me a song.ttf");
 }
 .SOBFont {
-  font-family: "SOB", "Press Start 2P", cursive;
+  font-family: "SOB", "Noto Sans", cursive;
 }
 
 @font-face {
@@ -78,7 +83,7 @@ export default {
   src: url("~@/assets/fonts/GenJyuuGothic-Monospace-Normal.ttf");
 }
 .SOBFontChinese {
-  font-family: "SOBChinese", "Press Start 2P", cursive;
+  font-family: "SOBChinese", "Noto Sans", cursive;
 }
 
 .v-parallax__image {

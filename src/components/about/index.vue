@@ -27,7 +27,7 @@ export default {
           src: require("@/assets/about/music.gif"),
         },
         {
-          job: "Game Develoepr",
+          job: "Game Developer",
           profile: ["崔元煜"],
           src: require("@/assets/about/program.gif"),
         },
@@ -54,6 +54,6 @@ export default {
 <style>
 .about {
   background-color: transparent !important;
-  max-height: 564px;
+  max-height: 2000px;
 }
 </style>

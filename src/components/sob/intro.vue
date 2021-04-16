@@ -9,7 +9,7 @@
       </v-container>
     </v-card>
     <div class="pa-3 black--text fourth--text SOBFontChinese">
-      <v-img :src="poster" />
+      <v-img :src="poster" id="posterElement" />
       <div style="display: block; height: 15px"></div>
 
       <div v-for="(item, index) in article" :key="index">
@@ -38,6 +38,7 @@ export default {
   data() {
     return {
       poster: require("@/assets/poster3.png"),
+      currentPoster: 0,
       article: [
         {
           title: "故事概要",
@@ -55,7 +56,21 @@ export default {
   methods: {
     rndPoster() {
       let rndPoster = Math.floor(Math.random() * 3) + 1;
+      this.currentPoster = rndPoster;
       this.poster = require("@/assets/poster" + rndPoster + ".png");
+      this.slideshow();
+    },
+    slideshow() {
+      let img = document.getElementById("posterElement");
+      setInterval(function () {
+        if (img.style.opacity < 0.6) {
+          let rndPoster = Math.floor(Math.random() * 3) + 1;
+          this.poster = require("@/assets/poster" + rndPoster + ".png");
+          img.style.opacity = 1;
+        } else {
+          img.style.opacity -= 0.01;
+        }
+      }, 100);
     },
   },
   mounted() {
