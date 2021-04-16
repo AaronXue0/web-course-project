@@ -38,7 +38,6 @@ export default {
   data() {
     return {
       poster: require("@/assets/poster3.png"),
-      currentPoster: 0,
       article: [
         {
           title: "故事概要",
@@ -56,21 +55,27 @@ export default {
   methods: {
     rndPoster() {
       let rndPoster = Math.floor(Math.random() * 3) + 1;
-      this.currentPoster = rndPoster;
       this.poster = require("@/assets/poster" + rndPoster + ".png");
       this.slideshow();
     },
+    fadeOut(self, img) {
+      let fading = setInterval(function () {
+        if (img.style.opacity < 0.5) {
+          let rndPoster = Math.floor(Math.random() * 3) + 1;
+          self.poster = require("@/assets/poster" + rndPoster + ".png");
+          img.style.opacity = 1;
+          clearInterval(fading);
+        } else {
+          img.style.opacity -= 0.1;
+        }
+      }, 10);
+    },
     slideshow() {
+      var self = this;
       let img = document.getElementById("posterElement");
       setInterval(function () {
-        if (img.style.opacity < 0.6) {
-          let rndPoster = Math.floor(Math.random() * 3) + 1;
-          this.poster = require("@/assets/poster" + rndPoster + ".png");
-          img.style.opacity = 1;
-        } else {
-          img.style.opacity -= 0.01;
-        }
-      }, 100);
+        setTimeout(self.fadeOut(self, img), 0);
+      }, 5000);
     },
   },
   mounted() {

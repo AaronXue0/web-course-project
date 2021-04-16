@@ -29,9 +29,6 @@ export default {
   methods: {},
   computed: {},
   async mounted() {
-    this.$imagePreload("https://nodejs.org/static/images/logo.svg").then((r) =>
-      console.log(r)
-    ); // return loaded img element
     await this.$imagePreload(
       [
         require("@/assets/poster1.png"),
