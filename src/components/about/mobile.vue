@@ -7,7 +7,7 @@
           <v-card
             flat
             color="black"
-            v-for="(item, index) in items"
+            v-for="(item, index) in stuffDatas"
             :key="index"
           >
             <v-row justify="center" align="center">
@@ -43,28 +43,9 @@
 
 <script>
 export default {
+  props: ["stuffDatas"],
   data() {
-    return {
-      items: [
-        {
-          job: "Director",
-          subjob: "Game Artist",
-          profile: ["李予棠"],
-          src: require("@/assets/about/art.gif"),
-        },
-        {
-          job: "Game Develoepr",
-          subjob: "Client",
-          profile: ["崔元煜", "薛賀升"],
-          src: require("@/assets/about/program.gif"),
-        },
-        {
-          job: "Music",
-          profile: ["陳向琥"],
-          src: require("@/assets/about/music.gif"),
-        },
-      ],
-    };
+    return {};
   },
   components: {},
   computed: {},

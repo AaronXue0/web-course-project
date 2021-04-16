@@ -73,6 +73,14 @@ export default {
   font-family: "SOB", "Press Start 2P", cursive;
 }
 
+@font-face {
+  font-family: "SOBChinese";
+  src: url("~@/assets/fonts/GenJyuuGothic-Monospace-Normal.ttf");
+}
+.SOBFontChinese {
+  font-family: "SOBChinese", "Press Start 2P", cursive;
+}
+
 .v-parallax__image {
   width: 100% !important;
 }

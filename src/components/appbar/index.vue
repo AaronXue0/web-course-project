@@ -12,16 +12,24 @@
       <mobile v-if="is_screen_small" :contents="contents" />
       <desktop v-else :contents="contents" />
     </v-app-bar>
-    <v-navigation-drawer v-model="drawerState" dark fixed app right>
+    <v-navigation-drawer
+      v-if="is_screen_small"
+      v-model="drawerState"
+      color="#161616"
+      dark
+      fixed
+      app
+      right
+    >
       <v-list nav dense>
-        <v-list-item-group v-model="selectedItem">
+        <v-list-item-group>
           <v-list-item
             v-for="(item, index) in contents.items"
             :key="index"
             :value="item.active"
-            active-class="primary"
+            active-class="secondary"
           >
-            <v-btn color="transparent" text :to="item.url">
+            <v-btn color="secondary" text :to="item.url">
               <span class="white--text">{{ item.name }} </span>
             </v-btn>
           </v-list-item>
@@ -42,7 +50,6 @@ export default {
   data() {
     return {
       drawer: true,
-      selectedItem: 0,
       contents: {
         logo: require("@/assets/STARRY white logo.png"),
         items: [

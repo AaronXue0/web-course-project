@@ -1,7 +1,12 @@
 <template>
   <v-timeline dense>
     <v-slide-x-reverse-transition group hide-on-leave>
-      <v-timeline-item v-for="(item, index) in gameContents" :key="index" small>
+      <v-timeline-item
+        v-for="(item, index) in gameContents"
+        :key="index"
+        small
+        color="secondary"
+      >
         <router-link :to="{ name: item.router }">
           <v-toolbar elevation="0" color="transparent" @click="click(item)">
             <h2>

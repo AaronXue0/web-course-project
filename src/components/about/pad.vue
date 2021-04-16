@@ -2,19 +2,16 @@
   <div>
     <div style="display: block; height: 90px"></div>
     <v-container fluid>
-      <v-row justify="center" align="center">
-        <v-col cols="12">
-          <tab />
-        </v-col>
-      </v-row>
+      <timeline :cols="5" :stuffDatas="stuffDatas" :lines="2" />
     </v-container>
   </div>
 </template>
 
 <script>
-import tab from "@/components/about/tab.vue";
+import timeline from "@/components/about/multiTimelines.vue";
 export default {
-  components: { tab },
+  props: ["stuffDatas"],
+  components: { timeline },
   computed: {},
   mounted() {},
 };

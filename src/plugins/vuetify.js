@@ -13,11 +13,13 @@ export default new Vuetify({
         primary: "#1d3a50",
         secondary: "#504b79",
         third: "#ffffff",
+        fourth: "#403c60",
       },
       dark: {
         primary: "#1d3a50",
         secondary: "#504b79",
         third: "#000000",
+        fourth: "#403c60",
       },
     },
   },

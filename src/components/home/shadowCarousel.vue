@@ -27,7 +27,7 @@
         @click="model = j"
       >
         <v-icon
-          :color="model == j ? 'red' : 'white'"
+          :color="model == j ? '#a4b5ff' : 'white'"
           x-small
           style="transform: rotate(45deg)"
         >
