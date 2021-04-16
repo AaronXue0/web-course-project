@@ -48,7 +48,7 @@
       style="transform: scaleY(-1); opacity: 0.5"
     >
       <v-carousel-item
-        v-for="(item, i) in carouselItems"
+        v-for="(item, i) in carouselShadowItems"
         :key="i"
         :src="item.src"
       ></v-carousel-item>
@@ -58,7 +58,7 @@
 
 <script>
 export default {
-  props: ["carouselItems"],
+  props: ["carouselItems", "carouselShadowItems"],
   components: {},
   data() {
     return { model: 0 };

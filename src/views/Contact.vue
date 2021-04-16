@@ -12,6 +12,10 @@ export default {
     return {};
   },
   methods: {},
+  mounted() {
+    this.$store.commit("setDrawerModel", 2);
+    document.title = "Contacts";
+  },
 };
 </script>
 

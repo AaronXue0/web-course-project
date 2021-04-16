@@ -20,6 +20,13 @@
           item.content
         }}</v-card-text>
       </div>
+      <div>
+        <v-card elevation="0" color="fourth" tile>
+          <v-card-actions>旅店</v-card-actions>
+        </v-card>
+        <div style="display: block; height: 15px"></div>
+        <v-img :src="require('@/assets/lobby dark.png')"></v-img>
+      </div>
     </div>
   </v-card>
 </template>

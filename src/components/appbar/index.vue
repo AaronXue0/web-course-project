@@ -22,16 +22,15 @@
       right
     >
       <v-list nav dense>
-        <v-list-item-group>
+        <v-list-item-group v-model="drawerModel">
           <v-list-item
             v-for="(item, index) in contents.items"
             :key="index"
             :value="item.active"
             active-class="secondary"
+            :to="item.url"
           >
-            <v-btn color="secondary" text :to="item.url">
-              <span class="white--text">{{ item.name }} </span>
-            </v-btn>
+            <h5 class="white--text Noto">{{ item.name }}</h5>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -72,6 +71,14 @@ export default {
       },
       set(val) {
         this.$store.commit("setDrawerState", val);
+      },
+    },
+    drawerModel: {
+      get() {
+        return this.$store.state.drawerModel;
+      },
+      set(val) {
+        this.$store.commit("setDrawerModel", val);
       },
     },
   },

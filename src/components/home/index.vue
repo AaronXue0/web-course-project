@@ -1,8 +1,20 @@
 <template>
   <div>
-    <mobile v-if="is_screen_small" :carouselItems="carouselItems" />
-    <pad v-else-if="is_screen_middle" :carouselItems="carouselItems" />
-    <desktop v-else :carouselItems="carouselItems" />
+    <mobile
+      v-if="is_screen_small"
+      :carouselItems="carouselItems"
+      :carouselShadowItems="carouselShadowItems"
+    />
+    <pad
+      v-else-if="is_screen_middle"
+      :carouselItems="carouselItems"
+      :carouselShadowItems="carouselShadowItems"
+    />
+    <desktop
+      v-else
+      :carouselItems="carouselItems"
+      :carouselShadowItems="carouselShadowItems"
+    />
   </div>
 </template>
 
@@ -18,6 +30,11 @@ export default {
         { src: require("@/assets/poster3.png") },
         { src: require("@/assets/poster2.png") },
         { src: require("@/assets/poster1.png") },
+      ],
+      carouselShadowItems: [
+        { src: require("@/assets/poster shadow.png") },
+        { src: require("@/assets/poster shadow1.png") },
+        { src: require("@/assets/poster shadow2.png") },
       ],
     };
   },

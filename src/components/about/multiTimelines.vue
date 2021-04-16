@@ -8,6 +8,7 @@
             :key="j"
             color="secondary"
             small
+            icon="mdi-eye"
           >
             <v-card-title
               class="text-center pa-0 ma-0"

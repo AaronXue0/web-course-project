@@ -9,7 +9,10 @@ import index from "@/components/games/index.vue";
 export default {
   name: "Games",
   components: { index },
-  mounted() {},
+  mounted() {
+    this.$store.commit("setDrawerModel", 3);
+    document.title = "Games";
+  },
 };
 </script>
 

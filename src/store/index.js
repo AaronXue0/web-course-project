@@ -6,10 +6,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     drawer: false,
+    drawerModel: 0,
   },
   mutations: {
     setDrawerState(state, payload) {
       state.drawer = payload;
+    },
+    setDrawerModel(state, payload) {
+      state.drawerModel = payload;
     },
   },
   actions: {},
