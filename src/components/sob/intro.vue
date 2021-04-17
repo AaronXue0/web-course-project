@@ -3,15 +3,24 @@
     <v-card color="#0d1a24" class="pa-3" tile elevation="0" width="100%">
       <v-container>
         <v-row>
-          <h1>Soul of Butterflies</h1>
-          <v-card-actions class="pa-1 SOBFont">INCUBATION</v-card-actions>
+          <v-toolbar elevation="0" color="transparent">
+            <h1>Soul of Butterflies</h1>
+            <v-card-actions class="pa-1 SOBFont">INCUBATION</v-card-actions>
+            <v-btn
+              icon
+              elevation="0"
+              color="transparent"
+              href="https://www.youtube.com/watch?v=LQN1eK75n-o"
+            >
+              <v-icon color="red"> mdi-youtube </v-icon>
+            </v-btn>
+          </v-toolbar>
         </v-row>
       </v-container>
     </v-card>
     <div class="pa-3 black--text fourth--text SOBFontChinese">
       <v-img :src="poster" id="posterElement" />
       <div style="display: block; height: 15px"></div>
-
       <div v-for="(item, index) in article" :key="index">
         <v-card elevation="0" color="fourth" tile>
           <v-card-actions>{{ item.title }}</v-card-actions>
@@ -27,6 +36,7 @@
         <div style="display: block; height: 15px"></div>
         <v-img :src="require('@/assets/lobby dark.png')"></v-img>
       </div>
+      <div style="display: block; height: 15px"></div>
     </div>
   </v-card>
 </template>
@@ -76,6 +86,14 @@ export default {
       setInterval(function () {
         setTimeout(self.fadeOut(self, img), 0);
       }, 5000);
+    },
+  },
+  computed: {
+    is_screen_small() {
+      return this.$vuetify.breakpoint.xs;
+    },
+    is_screen_large() {
+      return this.$vuetify.breakpoint.lg || this.$vuetify.breakpoint.xl;
     },
   },
   mounted() {

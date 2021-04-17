@@ -50,7 +50,7 @@ export default {
     return {
       drawer: true,
       contents: {
-        logo: require("@/assets/STARRY white logo.png"),
+        logo: require("@/assets/new starry logo.png"),
         items: [
           { name: "Home", url: "/" },
           { name: "About", url: "About" },

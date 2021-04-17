@@ -4,7 +4,9 @@ import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
 import imagePreloader from "vue-image-preloader";
+import VueYoutube from "vue-youtube";
 
+Vue.use(VueYoutube);
 Vue.use(vuetify);
 Vue.use(imagePreloader);
 Vue.config.productionTip = false;
