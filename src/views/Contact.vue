@@ -22,6 +22,6 @@ export default {
 <style>
 .contact {
   background-color: transparent !important;
-  max-height: 764px;
+  max-height: 1560px;
 }
 </style>

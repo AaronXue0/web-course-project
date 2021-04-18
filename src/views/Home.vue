@@ -19,6 +19,6 @@ export default {
 <style>
 .home {
   background-color: transparent !important;
-  max-height: 764px;
+  max-height: 1280px;
 }
 </style>

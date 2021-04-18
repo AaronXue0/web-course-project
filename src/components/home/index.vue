@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home-index">
     <mobile
       v-if="is_screen_small"
       :carouselItems="carouselItems"
@@ -50,3 +50,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.home-index {
+  background-color: transparent !important;
+  max-height: 512px;
+}
+</style>
