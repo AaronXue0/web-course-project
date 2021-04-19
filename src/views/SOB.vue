@@ -9,20 +9,7 @@ import index from "@/components/sob/index.vue";
 export default {
   components: { index },
   data() {
-    return {
-      gameContents: [
-        {
-          src: require("@/assets/poster3.png"),
-          title: "Soul of Butterflies",
-          subtitle: "INCUBATION",
-          router: "sob",
-        },
-        {
-          src: require("@/assets/EscapeCG.png"),
-          title: "E$*A@E!404!",
-        },
-      ],
-    };
+    return {};
   },
   methods: {},
   computed: {},

@@ -1,11 +1,6 @@
 <template>
   <v-container class="Noto">
     <div style="display: block; height: 90px"></div>
-    <v-img
-      :src="require('@/assets/bird body.png')"
-      width="100px"
-      style="position: fixed; top: 100px; left: 900px"
-    ></v-img>
     <v-form ref="form" id="form">
       <v-row align="center" justify="center">
         <v-col cols="12" md="8" lg="10">

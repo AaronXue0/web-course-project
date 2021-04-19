@@ -16,13 +16,13 @@ export default {
     return {
       gameContents: [
         {
-          src: require("@/assets/poster3.png"),
+          src: require("@/assets/sobs/poster3.jpg"),
           title: "Soul of Butterflies",
           subtitle: "INCUBATION",
           router: "sob",
         },
         {
-          src: require("@/assets/EscapeCG.png"),
+          src: require("@/assets/escapes/EscapeCG.jpg"),
           title: "E$*A@E!404!",
         },
       ],

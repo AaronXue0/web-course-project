@@ -4,6 +4,7 @@
     <v-container fluid class="pa-2">
       <timeline :cols="4" :stuffDatas="stuffDatas" :lines="2" />
     </v-container>
+    <div style="display: block; height: 90px"></div>
   </div>
 </template>
 

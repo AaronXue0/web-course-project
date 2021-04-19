@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <appbar class="Noto" />
-    <v-parallax height="100%" :src="require('@/assets/backgroundImage.png')">
+    <v-parallax height="100%" :src="require('@/assets/backgroundImage.jpg')">
       <router-view></router-view>
       <foot class="Noto" />
     </v-parallax>
@@ -31,21 +31,19 @@ export default {
   async mounted() {
     await this.$imagePreload(
       [
-        require("@/assets/poster1.png"),
-        require("@/assets/poster2.png"),
-        require("@/assets/poster3.png"),
-        require("@/assets/poster shadow.png"),
-        require("@/assets/poster shadow1.png"),
-        require("@/assets/poster shadow2.png"),
-        require("@/assets/escape logo.png"),
-        require("@/assets/lobby.png"),
-        require("@/assets/lobby dark.png"),
-        require("@/assets/EscapeCG.png"),
-        require("@/assets/logo.png"),
-        require("@/assets/sob-cg.png"),
+        require("@/assets/sobs/poster1.jpg"),
+        require("@/assets/sobs/poster2.jpg"),
+        require("@/assets/sobs/poster3.jpg"),
+        require("@/assets/sobs/poster shadow.jpg"),
+        require("@/assets/sobs/poster shadow1.jpg"),
+        require("@/assets/sobs/poster shadow2.jpg"),
+        require("@/assets/sobs/lobby dark.jpg"),
+        //*
         require("@/assets/about/art.gif"),
         require("@/assets/about/program.gif"),
         require("@/assets/about/music.gif"),
+        //*
+        require("@/assets/escapes/EscapeCG.jpg"),
       ],
       (e) => {
         this.loading = Math.floor(e.progress * 100) / 100;

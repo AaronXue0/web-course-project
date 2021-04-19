@@ -34,7 +34,7 @@
           <v-card-actions>旅店</v-card-actions>
         </v-card>
         <div style="display: block; height: 15px"></div>
-        <v-img :src="require('@/assets/lobby dark.png')"></v-img>
+        <v-img :src="require('@/assets/sobs/lobby dark.jpg')"></v-img>
       </div>
       <div style="display: block; height: 15px"></div>
     </div>
@@ -47,7 +47,7 @@ export default {
   components: {},
   data() {
     return {
-      poster: require("@/assets/poster3.png"),
+      poster: require("@/assets/sobs/poster3.jpg"),
       article: [
         {
           title: "故事概要",
@@ -65,14 +65,14 @@ export default {
   methods: {
     rndPoster() {
       let rndPoster = Math.floor(Math.random() * 3) + 1;
-      this.poster = require("@/assets/poster" + rndPoster + ".png");
+      this.poster = require("@/assets/sobs/poster" + rndPoster + ".jpg");
       this.slideshow();
     },
     fadeOut(self, img) {
       let fading = setInterval(function () {
         if (img.style.opacity < 0.5) {
           let rndPoster = Math.floor(Math.random() * 3) + 1;
-          self.poster = require("@/assets/poster" + rndPoster + ".png");
+          self.poster = require("@/assets/sobs/poster" + rndPoster + ".jpg");
           img.style.opacity = 1;
           clearInterval(fading);
         } else {
