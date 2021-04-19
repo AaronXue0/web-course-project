@@ -33,15 +33,3 @@ export default {
   methods: {},
 };
 </script>
-
-<style>
-.mark:hover {
-  background: linear-gradient(to top, #1d3a50 50%, transparent 50%);
-  border-radius: 0;
-}
-
-.logo-btn {
-  position: relative;
-  top: 10px;
-}
-</style>

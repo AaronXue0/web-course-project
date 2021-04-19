@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row v-if="cols" justify="center" align="center">
+    <v-row v-if="cols" justify="center" align="start">
       <v-col v-for="(array, i) in datas" :key="i" :cols="cols">
         <v-timeline reverse>
           <v-timeline-item

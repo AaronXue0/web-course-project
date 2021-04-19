@@ -49,7 +49,7 @@ export default {
       ],
       (e) => {
         this.loading = Math.floor(e.progress * 100) / 100;
-        if (e.progress >= 99) this.overlay = false;
+        if (e.progress >= 60) this.overlay = false;
       }
     );
   },
@@ -62,9 +62,6 @@ export default {
 
 .Noto {
   font-family: "Noto Sans", sans-serif;
-}
-.Press2P {
-  font-family: "Press Start 2P", cursive;
 }
 
 @font-face {

@@ -50,10 +50,3 @@ export default {
   mounted() {},
 };
 </script>
-
-<style>
-.about {
-  background-color: transparent !important;
-  max-height: 2000px;
-}
-</style>
